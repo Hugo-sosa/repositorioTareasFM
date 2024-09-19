@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String edadtxt = edad.getText().toString();
                 if (edadtxt.isEmpty()) {
-                    resultado.setText("Escribe algo plis");
+                    Toast.makeText(MainActivity.this,"Pon algo",Toast.LENGTH_SHORT).show();
                 } else {
                     int edad = Integer.parseInt(edadtxt);
                     resultado.setText("Si fueras perro tu edad seria de " + (edad*7) + " años");
