@@ -26,8 +26,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String edadtxt = edad.getText().toString();
-                int edad = Integer.parseInt(edadtxt);
-                resultado.setText("Si fueras perro tu edad seria de " + (edad*7) + " años");
+                if (edadtxt.isEmpty()) {
+                    resultado.setText("Escribe algo plis");
+                } else {
+                    int edad = Integer.parseInt(edadtxt);
+                    resultado.setText("Si fueras perro tu edad seria de " + (edad*7) + " años");
+                }
             }
         });
     }
